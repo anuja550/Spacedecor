@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Space Decor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4a4a4a;
+            --secondary-color: #666;
+            --background-color: #f4f4f4;
+            --white-color: #fff;
+            --border-color: #eee;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--primary-color);
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: var(--white-color);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+        #faqSearch {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        .faq-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            cursor: pointer;
+            position: relative;
+            padding-right: 30px;
+            transition: color 0.3s ease;
+        }
+
+        .faq-item h3:hover {
+            color: #007bff;
+        }
+
+        .faq-item h3::after {
+            content: '\f054'; /* Right Arrow */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active h3::after {
+            transform: rotate(90deg);
+        }
+
+        .faq-item p {
+            display: none;
+            padding-left: 10px;
+            color: var(--secondary-color);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active p {
+            display: block;
+            max-height: 500px; /* Adjust as needed */
+        }
+
+      
+      
+
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <input type="text" id="faqSearch" placeholder="Search FAQs...">
+
+        <div class="faq-item">
+            <h3><i class="fas fa-question-circle"></i> What services do you offer?</h3>
+            <p>We offer a full range of interior design services, including space planning, furniture selection, color consultation, custom cabinetry design, lighting design, and project management. We cater to both residential and commercial projects.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3><i class="fas fa-dollar-sign"></i> How much do your services cost?</h3>
+            <p>Our pricing varies depending on the scope and complexity of the project. We offer customized packages and hourly rates. We recommend scheduling a consultation to discuss your specific needs and receive a detailed quote.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3><i class="fas fa-tasks"></i> What is your design process?</h3>
+            <p>Our process typically includes an initial consultation, concept development, design presentation, revisions, and project implementation. We work closely with our clients at every stage to ensure their vision is realized.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3><i class="fas fa-clock"></i> How long does a typical project take?</h3>
+            <p>The timeline varies based on the size and complexity of the project. A small residential project might take a few weeks, while a large commercial project could take several months. We provide a detailed project timeline during the initial consultation.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3><i class="fas fa-images"></i> Do you provide 3D renderings?</h3>
+            <p>Yes, we provide 3D renderings to help you visualize the final design. This allows you to make informed decisions and ensure the design meets your expectations.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3><i class="fas fa-calendar-alt"></i> How do I schedule a consultation?</h3>
+            <p>We specialize in a range of styles, including modern, contemporary, minimalist, Scandinavian, and transitional. We adapt our style to match your personal taste and preferences.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3><i class="fas fa-tree"></i> Do you incorporate plants and greenery into your designs?</h3>
+            <p>Yes, we believe that plants and greenery add life and vibrancy to any space. We can incorporate indoor plants and vertical gardens to enhance your interior.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3><i class="fas fa-file-invoice"></i> How do you handle billing and payments?</h3>
+            <p>We provide detailed invoices and offer flexible payment options. We discuss payment schedules during the initial consultation.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3><i class="fas fa-handshake"></i> What is your approach to client communication?</h3>
+            <p>We prioritize clear and consistent communication. We provide regular updates and are always available to answer your questions.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3><i class="fas fa-shopping-cart"></i> Do you handle procurement of furniture and materials?</h3>
+            <p>Yes, we handle the entire procurement process, including sourcing, purchasing, and delivery of furniture, fixtures, and materials. We work with trusted suppliers to ensure quality and timely delivery.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3><i class="fas fa-calendar-alt"></i> How do I schedule a consultation?</h3>
+            <p>You can schedule a consultation by filling out the contact form on our website or by calling us directly. We will get back to you to arrange a convenient time.</p>
+        </div>
+
+        <div class="question-form">
+            <h2>Ask Your Question</h2>
+            <form id="askQuestionForm">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="question">Your Question:</label>
+                <textarea id="question" name="question" rows="4" required></textarea>
+        
+                <button type="submit">Submit Question</button>
+                <p id="responseMessage" style="color: green; display: none;"></p> 
+            </form>
+        </div>
+        
+        <script>
+            document.getElementById('askQuestionForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent page reload
+            
+                let formData = new FormData(this); // Collect form data
+            
+                fetch('submit_question.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('responseMessage').innerText = "Your question has been submitted successfully!";
+                    document.getElementById('responseMessage').style.display = "block";
+                    document.getElementById('askQuestionForm').reset(); // Clear form after submission
+                })
+                .catch(error => console.error('Error:', error));
+            });
+        </script>
+    
+    
+    <style>
+        .question-form {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+    
+        .question-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    
+        .question-form input,
+        .question-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    
+        .question-form button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+        const searchInput = document.getElementById('faqSearch');
+
+        faqItems.forEach(item => {
+            const heading = item.querySelector('h3');
+            heading.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            faqItems.forEach(item => {
+                const question = item.querySelector('h3').textContent.toLowerCase();
+                const answer = item.querySelector('p').textContent.toLowerCase();
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    
+</body>
+</html>

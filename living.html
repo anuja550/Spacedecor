@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designs Page</title>
+    <title>Space Decor - Interior Design Mumbai</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".save-btn").forEach(button => {
+                button.addEventListener("click", function () {
+                    alert("Design saved to favorites!");
+                });
+            });
+
+            document.querySelectorAll(".share-btn").forEach(button => {
+                button.addEventListener("click", function () {
+                    const designURL = window.location.href;
+                    navigator.clipboard.writeText(designURL).then(() => {
+                        alert("Design link copied! Share it with your friends.");
+                    }).catch(err => {
+                        console.error("Failed to copy: ", err);
+                    });
+                });
+            });
+        });
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .designs-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 200px;
+            max-width: 1200px;
+        }
+        .design-card {
+            background: #eceaea;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+            width: 100%;
+            max-width: 400px;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .design-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        .design-card img {
+            width: 100%;
+            border-radius: 8px;
+            height: 400px;
+            object-fit: cover;
+        }
+        .design-card h2 {
+            margin: 12px 0;
+            font-size: 20px;
+            color: #222;
+        }
+        .design-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background: #ce9f05c7;
+            color: rgb(0, 0, 0);
+        }
+        .btn-primary:hover {
+            background: #555;
+        }
+        .btn-secondary {
+            background: #f4f4f4;
+            color: #000000;
+            border: 1px solid #ddd;
+        }
+        .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+        .reviews {
+            font-size: 14px;
+            color: #1b1a1a;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="designs-container">
+        <div class="design-card">
+            <img src="Project_Img/Living Room/1.jpg" alt="Design 1">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.5/5 (120 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/2.jpg" alt="Design 2">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.7/5 (98 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/3.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/4.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/5.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/6.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/7.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/8.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/9.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/10.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/11.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/12.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/13.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/14.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/15.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/16.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/17.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/18.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/19.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+        <div class="design-card">
+            <img src="Project_Img/Living Room/20.jpg" alt="Design 3">
+            <a href="estimator.html" class="btn btn-primary">Check Cost Estimate</a>
+            <a href="consultation.html" class="btn btn-primary">Consult Now</a>
+            <div class="reviews">⭐ 4.8/5 (135 reviews)</div>
+            <button class="btn btn-secondary share-btn">Share</button>
+        </div>
+    </div>
+</body>
+</html>
